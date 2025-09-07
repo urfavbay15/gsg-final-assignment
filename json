@@ -1,0 +1,22 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/r:4.3",
+  "features": {
+    "ghcr.io/devcontainers/features/rstudio:1": {}
+  },
+  "forwardPorts": [8787],
+  "portsAttributes": {
+    "8787": {
+      "label": "RStudio",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "Rscript -e 'install.packages(c(\"tidyverse\", \"rmarkdown\", \"shiny\"))'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "reditorsupport.r",
+        "quarto.quarto"
+      ]
+    }
+  }
+}
